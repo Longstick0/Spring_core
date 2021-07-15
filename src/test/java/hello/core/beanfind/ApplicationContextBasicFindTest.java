@@ -31,7 +31,7 @@ public class ApplicationContextBasicFindTest {
     }
 
     @Test
-    @DisplayName("구체 타임으로 조회")
+    @DisplayName("구체 타입으로 조회")
     void findBeanByName2() {
         MemberServiceImpl memberService = ac.getBean("memberService", MemberServiceImpl.class);
         assertThat(memberService).isEqualTo(MemberServiceImpl.class);
