@@ -4,6 +4,7 @@ import hello.core.AppConfig;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemberServiceImpl;
 import hello.core.order.OrderServiceImpl;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -28,5 +29,8 @@ public class ConfigurationSingletonTest {
 //        memberService -> memberRepository1 = hello.core.member.MemoryMemberRepository@3370f42
 //        orderService -> memberRepository2 = hello.core.member.MemoryMemberRepository@3370f42
 //        memberRepository = hello.core.member.MemoryMemberRepository@3370f42
+
+        Assertions.assertThat(memberService.getMemberRepository()).isSameAs(orderService.getMemberRepository());
+        Assertions.assertThat(orderService.getMemberRepository()).isSameAs(memberRepository);
     }
 }
