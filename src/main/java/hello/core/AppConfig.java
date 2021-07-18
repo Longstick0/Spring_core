@@ -22,16 +22,19 @@ public class AppConfig {
 
     @Bean // 메서드에 @Bean을 붙여주게 되면, Spring Container에 등록 됨
     public MemberService memberService() {
+        System.out.println("Call AppConfig.memberService");
         return new MemberServiceImpl(memberRepository());
     }
 
     @Bean
     public MemberRepository memberRepository() {
+        System.out.println("Call AppConfig.memberRepository");
         return new MemoryMemberRepository();
     }
 
     @Bean
     public OrderService orderService() {
+        System.out.println("Call AppConfig.orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
