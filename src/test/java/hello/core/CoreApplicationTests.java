@@ -10,12 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class CoreApplicationTests {
 
-	@Autowired
-	OrderService orderService;
-
 	@Test
 	void contextLoads() {
-
 	}
-
 }

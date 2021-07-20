@@ -21,6 +21,7 @@ public class OrderServiceImpl implements OrderService{
     }
 
 
+
     //    @Autowired //(required = false) 선택적 의존 관계
 //    // @Autowired의 기본 동작은 주입할 대사이 없으면 오류가 발생한다. 주입할 대상이 없어도 동작하게 하려면 required를
 //    // false로 지정하면 된다.
