@@ -23,5 +23,7 @@ public class AutoAppConfigTest {
         OrderServiceImpl bean = ac.getBean(OrderServiceImpl.class);
         MemberRepository memberRepository = bean.getMemberRepository();
         System.out.println("memberService = " + memberService);
+        System.out.println("memberService = " + memberService);
+        System.out.println("memberService = " + memberService);
     }
 }
