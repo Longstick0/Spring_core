@@ -10,11 +10,14 @@ import lombok.ToString;
 public class HelloLombok {
     private String name;
     private int age;
+    private String sex;
 
     public static void main(String[] args) {
         HelloLombok helloLombok = new HelloLombok();
         helloLombok.setName("Lombok");
+        helloLombok.setName("Real Lombok");
         helloLombok.setAge(10);
+        helloLombok.setSex("Man");
 
         String name = helloLombok.getName();
         System.out.println("name = " + name);
