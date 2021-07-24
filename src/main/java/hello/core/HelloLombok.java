@@ -11,6 +11,7 @@ public class HelloLombok {
     private String name;
     private int age;
     private String sex;
+    private int height;
 
     public static void main(String[] args) {
         HelloLombok helloLombok = new HelloLombok();
@@ -18,6 +19,7 @@ public class HelloLombok {
         helloLombok.setName("Real Lombok");
         helloLombok.setAge(10);
         helloLombok.setSex("Man");
+        helloLombok.setHeight(180);
 
         String name = helloLombok.getName();
         System.out.println("name = " + name);
