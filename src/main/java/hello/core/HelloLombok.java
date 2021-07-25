@@ -26,6 +26,6 @@ public class HelloLombok {
 
         int age = helloLombok.getAge();
         System.out.println("age = " + age);
-
+        System.out.println("age = " + age);
     }
 }
