@@ -8,14 +8,22 @@ import hello.core.member.MemberRepository;
 import hello.core.member.MemoryMemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-@RequiredArgsConstructor // final이 붙은 객체 -> 생성자로 만들어줌
+// @RequiredArgsConstructor // final이 붙은 객체 -> 생성자로 만들어줌
 public class OrderServiceImpl implements OrderService{
 
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
+
+    @Autowired
+    public OrderServiceImpl(MemberRepository memberRepository, @Qualifier("mainDiscountPolicy") DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
+
 
 //    //생성자가 하나기 때문에 @Autowired는 생략 가능, @RequiredArgsConstructor로 인해 생성자가 만들어졌으므로 주석처리
 //    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
