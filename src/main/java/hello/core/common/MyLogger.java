@@ -24,11 +24,11 @@ public class MyLogger {
 
     @PostConstruct
     public void init() {
-        uuid = UUID.randomUUID().toString();
+        uuid = UUID.randomUUID().toString(); //유니크한 아이디 하나 생성됨(절대로 겹치지 않음)
         System.out.println("[" + uuid + "] request scope create:" + this);
     }
 
-    @PreDestroy
+    @PreDestroy //빈 소멸
     public void close() {
         System.out.println("[" + uuid + "] request scope close:" + this);
     }
