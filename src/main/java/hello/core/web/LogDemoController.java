@@ -26,6 +26,7 @@ public class LogDemoController {
 
         myLogger.log("controller test");
         Thread.sleep(1000);
+
         logDemoService.logic("testId");
         return "OK";
     }
